@@ -1,0 +1,35 @@
+<form [formGroup]="myForm">
+  <table>
+    <tr>
+      <td>name:</td>
+      <td><input type="text" formControlName="name">
+      <div *ngIf="name.errors && name.touched"> <!---name.invalid-->
+        <div *ngIf="name.errors['required']">Name obligatoire!</div>
+        <div *ngIf="name.errors['minlength']">Minimum
+          {{name.errors['minlength'].requiredLength}} caractères alors que tu as tapé
+          {{name.errors['minlength'].actualLength}}</div>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td>adress {{ address.dirty }}</td>
+      <td><input type="text" formControlName="address">
+        <div *ngIf="address.invalid && address.touched">
+          address obligatoire!
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td><input type="text" formControlName="image">
+        <div *ngIf="image.invalid">
+          image obligatoire!
+        </div></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="addR()" [disabled]="myForm.invalid">add</button></td>
+    </tr>
+  </table>
+
+</form>
