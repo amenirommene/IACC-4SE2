@@ -1,0 +1,9 @@
+<ul>
+<li *ngFor="let r of listResidences">
+  {{r.name}} - {{r.address}} - <img [src]="r.image">
+  <a [routerLink]="['details',r.id]">Details</a>
+<button (click)="deleteResidence(r.id)">delete</button>
+</li>
+</ul>
+<button (click)="goTo()">go</button>
+<router-outlet></router-outlet>
