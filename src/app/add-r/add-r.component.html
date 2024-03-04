@@ -1,5 +1,6 @@
 <form [formGroup]="myForm">
   <table>
+    <div formGroupName="groupe1">
     <tr>
       <td>name:</td>
       <td><input type="text" formControlName="name">
@@ -19,7 +20,9 @@
         </div>
       </td>
     </tr>
-    <tr>
+    </div>
+    <div>
+    <tr *ngIf="groupe1.valid">
       <td>image</td>
       <td><input type="text" formControlName="image">
         <div *ngIf="image.invalid">
@@ -30,6 +33,7 @@
       <td></td>
       <td><button (click)="addR()" [disabled]="myForm.invalid">add</button></td>
     </tr>
+    </div>
   </table>
 
 </form>

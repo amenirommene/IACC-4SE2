@@ -14,20 +14,25 @@ myForm : FormGroup;
 constructor(private rs:ResidenceService){}
 ngOnInit(){
   this.myForm= new FormGroup({
+    groupe1: new FormGroup({
     address:new FormControl('',[Validators.required]),
     name:new FormControl('',[Validators.required,Validators.minLength(7)]),
+  }),
     image:new FormControl('', Validators.required),
   });
 }
 
 get name(){
-  return this.myForm.get('name');
+  return this.myForm.get('groupe1').get('name');
 }
 get address(){
-  return this.myForm.get('address');
+  return this.myForm.get('groupe1').get('address');
 }
 get image(){
   return this.myForm.get('image');
+}
+get groupe1(){
+  return this.myForm.get('groupe1');
 }
 
 addR(){

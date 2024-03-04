@@ -35,6 +35,12 @@
       "name": "sdfghjkl",
       "image": "sdfghj",
       "id": 8
+    },
+    {
+      "address": "âzertyuiop",
+      "name": "azertyuiop",
+      "image": "^szdfghjklm",
+      "id": 9
     }
   ],
   "apartments": [
