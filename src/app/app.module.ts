@@ -13,6 +13,7 @@ import { DetailsResidenceComponent } from './details-residence/details-residence
 import { HttpClientModule } from '@angular/common/http';
 import { AddRComponent } from './add-r/add-r.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ApartmentComponent,
     ResidencesComponent,
     DetailsResidenceComponent,
-    AddRComponent
+    AddRComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

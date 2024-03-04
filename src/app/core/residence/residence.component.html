@@ -1,9 +1,11 @@
+<input type="text" [(ngModel)]="name">
 <ul>
-<li *ngFor="let r of listResidences">
-  {{r.name}} - {{r.address}} - <img [src]="r.image">
-  <a [routerLink]="['details',r.id]">Details</a>
-<button (click)="deleteResidence(r.id)">delete</button>
+<div *ngFor="let r of listResidences">
+  <li *ngIf="r.name == name">
+<app-card  (notif)="deleteResidence(r.id, $event)" [name]="r.name" [adresse]="r.address" [image]="r.image"></app-card>
+ <a [routerLink]="['details',r.id]">Details</a>
 </li>
+</div>
 </ul>
 <button (click)="goTo()">go</button>
 <router-outlet></router-outlet>

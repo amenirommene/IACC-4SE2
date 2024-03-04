@@ -10,7 +10,7 @@ import { ResidenceService } from 'src/app/residence.service';
   styleUrls: ['./residence.component.css']
 })
 export class ResidenceComponent {
-
+  name : string = "";
   constructor(private _router:Router,
     private rs:ResidenceService){}
 
@@ -27,7 +27,8 @@ export class ResidenceComponent {
         this.rs.getAllApartments().subscribe(
           res=>this.listApartments=res);
     }
-    deleteResidence(id:number){
+    deleteResidence(id:number, msg:string){
+      alert (msg);
       this.rs.deleteResidence(id).subscribe(
         ()=>this.rs.getAllResidences().subscribe(
           res=>this.listResidences=res)

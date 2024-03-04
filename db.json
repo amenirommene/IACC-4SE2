@@ -1,18 +1,6 @@
 {
   "residences": [
     {
-      "id": 3,
-      "name": "El Arij",
-      "address": "Rades",
-      "image": "../../assets/images/R3.jpg"
-    },
-    {
-      "id": 4,
-      "name": "El Anber",
-      "address": "Manzah 5",
-      "image": "../../assets/images/R4.jpg"
-    },
-    {
       "address": "zdefrghjklm",
       "name": "azertyuiolp",
       "image": "dfgbhnj,k;",
